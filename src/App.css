@@ -1,0 +1,101 @@
+header{
+  background: #FFC017;
+border-bottom: 1px solid #292929;
+padding: 10px 0;
+}
+.section{
+  background: #FFC017;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+.right img{
+  float: right;
+}
+.section1{
+  display: flex;
+  justify-content: center;
+
+}
+.section2{
+  border-bottom: 1px solid black;
+}
+.left2 div{
+  margin-bottom: 10px;
+}
+.top h2{
+  font-weight: 700;
+font-size: 11px;
+line-height: 16px;
+/* or 145% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.996px;
+text-transform: uppercase;
+
+color: #292929;
+}
+.section3{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.right2{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.top button{
+  border: 1px solid #E6E6E6;
+border-radius: 3px;
+color: #757575;
+background-color: white;
+}
+
+.left h2{
+  font-weight: 400;
+font-size: 106px;
+line-height: 95px;
+/* or 90% */
+padding-top: 74px;
+display: flex;
+align-items: center;
+letter-spacing: -5.3px;
+}
+.left div{
+  font-weight: 400;
+font-size: 24px;
+line-height: 24px;
+/* or 100% */
+padding-top: 17px;
+display: flex;
+align-items: center;
+width: 420px;
+color: #292929;
+
+}
+.left button{
+  margin-top: 52px;
+  padding: 2px 48px 2px 48px;
+  font-size: 20px;
+}
+.section2{
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.top span{
+  font-size: 11px;
+line-height: 16px;
+/* identical to box height, or 145% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.996px;
+text-transform: uppercase;
+
+color: #292929;
+}
+.top img{
+  padding-top: 10px;
+}
