@@ -8,9 +8,9 @@ export default function Section3({section3Data}){
              {News.map((e)=>{
                 return(
                     <div className="news d-flex justify-content-between ">
-                        <div className="title col-8">
+                        <div className="title col-md-8">
                             <div className="d-flex align-items-center">
-                                <div>
+                                <div className="col-1">
                                    <img src={e.img} alt="" width={40}/>
                                 </div>
                                 <div>
