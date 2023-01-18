@@ -6,7 +6,10 @@ import Section4 from "./components/section4";
 import React, { useState } from "react";
 import Modal from "./components/modal";
 import LogHeader from "./components/logHeader";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Admin from "./pages/adminLogin";
+import AdminHome from "./pages/admin";
 const data = {
   user: {
     email: "ganzrg",
@@ -32,15 +35,42 @@ const data = {
   section3: {
     title: "Discover more of what matters to you",
     category: [
-      "Programming",
-      "Data Science",
-      "Technology",
-      "Self Improvement",
-      "Writing",
-      "Relationships",
-      "Machine Learning",
-      "Productivity",
-      "Politics",
+      {
+        name: "Programming",
+        id: 1,
+      },
+      {
+        name: "Data Science",
+        id: 2,
+      },
+      {
+        name: "Technology",
+        id: 3,
+      },
+      {
+        name: "Self Improvement",
+        id: 4,
+      },
+      {
+        name: "Writing",
+        id: 5,
+      },
+      {
+        name: "Relationships",
+        id: 6,
+      },
+      {
+        name: "Machine Learning",
+        id: 7,
+      },
+      {
+        name: "Productivity",
+        id: 8,
+      },
+      {
+        name: "Politics",
+        id: 9,
+      },
     ],
     category2: [
       "Help",
@@ -60,7 +90,8 @@ function App() {
   const [btnColor, setBtnColor] = useState("black");
   const [modal, setModal] = useState(false);
   const [logIn, setLogIn] = useState(false);
-
+  const [admin, setAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const style1Obj = {
     backgroundColor: btnColor,
   };
@@ -87,14 +118,13 @@ function App() {
   const hideModal = () => {
     setModal(false);
   };
-  // if (logIn) {
-  //   return (
-  //     <div>
-  //       <logHeader logData={data.header} />
-  //     </div>
-  //   );
-  // }
-  return (
+  const handleAdmin = () => {
+    setAdmin(true);
+  };
+  // const AdminLogin = () => {
+  //   setIsAdmin(true);
+  // };
+  return !admin ? (
     <div
       onScroll={handleScroll}
       style={{
@@ -123,16 +153,25 @@ function App() {
         setLogIn={setLogIn}
         user={data.user}
         hide={hideModal}
+        admin={handleAdmin}
       />
       {logIn ? "" : <Section1 section1Data={data.section1} />}
       <Section2 section2Data={data.section2} />
       {logIn ? (
-        <Section4 section3Data={data.section3} />
+        <Section4 section4Data={data.section3} />
       ) : (
         <Section3 section3Data={data.section3} />
       )}
+    </div>
+  ) : (
+    <div className="container">
+      <Routes>
+        <Route exact path="/" element={<Admin />}></Route>
+        <Route path="/admin" element={<AdminHome />} />
+      </Routes>
     </div>
   );
 }
 
 export default App;
+// adminLogin={AdminLogin}

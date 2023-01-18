@@ -1,6 +1,6 @@
 import Category from "./category";
 import News from "./news";
-export default function Section4({ section3Data }) {
+export default function Section4({ section4Data }) {
   return (
     <section className="section3">
       <div className="container  row">
@@ -34,7 +34,7 @@ export default function Section4({ section3Data }) {
           })}
         </div>
         <div className="right2 col-md-3 ">
-          <Category categoryData={section3Data} />
+          <Category categoryData={section4Data} />
         </div>
       </div>
     </section>

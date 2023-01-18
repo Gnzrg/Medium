@@ -1,14 +1,9 @@
 import { useState } from "react";
 
-export default function Modal({ modal, setLogIn, user, hide }) {
+export default function Modal({ modal, setLogIn, user, hide, admin }) {
   const styleObj = {
     display: modal ? "block" : "none",
   };
-
-  const users = [
-    { id: 1, username: "qwe", pass: "123123" },
-    { id: 2, username: "asd", pass: "123123" },
-  ];
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const handleChange = (e) => {
@@ -70,10 +65,10 @@ export default function Modal({ modal, setLogIn, user, hide }) {
             </button>
           </div>
           <p className="text-center">
-            Haven't account
-            <a href="#" className="text-warning">
-              Sign up
-            </a>
+            Admin?
+            <p className="text-warning" onClick={admin}>
+              Admin sign in
+            </p>
           </p>
         </div>
       </div>
