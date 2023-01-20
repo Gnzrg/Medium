@@ -7,8 +7,8 @@ export default function Admin() {
     fetch("https://medium-api-psi.vercel.app/api/news")
       .then((response) => response.json())
       .then((dt) => {
-        console.log(dt.news);
-        setData(dt.news);
+        console.log(dt.result);
+        setData(dt.result);
       });
   }, []);
 
