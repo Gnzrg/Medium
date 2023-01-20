@@ -4,7 +4,7 @@ import { BarChart } from "./BarChart";
 export default function Admin() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://192.168.1.50:4040/news")
+    fetch("https://medium-api-psi.vercel.app/api/news")
       .then((response) => response.json())
       .then((dt) => {
         console.log(dt.news);
