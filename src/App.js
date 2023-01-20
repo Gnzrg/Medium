@@ -124,6 +124,8 @@ function App() {
   // const AdminLogin = () => {
   //   setIsAdmin(true);
   // };
+
+  console.log(admin);
   return !admin ? (
     <div
       onScroll={handleScroll}
