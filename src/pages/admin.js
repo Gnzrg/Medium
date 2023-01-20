@@ -40,7 +40,7 @@ export default function Admin() {
               </div>
 
               <div className="nav-item">
-                <a className="nav-link text-dark">Users</a>
+                <a className="nav-link text-dark">Categories</a>
               </div>
             </div>
           </div>
