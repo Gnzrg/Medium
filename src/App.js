@@ -10,6 +10,10 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Admin from "./pages/adminLogin";
 import AdminHome from "./pages/admin";
+import Dashboard from "./pages/dashboad";
+import User from "./pages/user";
+import News from "./pages/new";
+import Category from "./components/category";
 const data = {
   user: {
     email: "ganzrg",
@@ -168,8 +172,12 @@ function App() {
   ) : (
     <div className="container">
       <Routes>
-        <Route exact path="/" element={<Admin />}></Route>
-        <Route path="/admin" element={<AdminHome />} />
+        <Route element={<AdminHome />}>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/category" element={<Category />} />
+        </Route>
       </Routes>
     </div>
   );
